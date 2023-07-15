@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>CHUYỂN ĐỔI TIỀN TỆ</h1>
+<table>
+
+    <tr>
+        <td style="text-align: center" width="100px">Amount1</td>
+        <td style="text-align: center" width="100px">From Currency</td>
+        <td style="text-align: center" width="100px">To Currency</td>
+        <td style="text-align: center" width="100px"></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="sotien" style="width: 100px"></td>
+        <td style="text-align: center" width="100px">
+            <select name="" id="option1">
+                <option value="VND">VietNam</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td style="text-align: center" width="100px">
+            <select name="" id="option2">
+                <option value="VND">VietNam</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="Quydoi()">Convert</button>
+        </td>
+    </tr>
+
+    <script>
+        function Quydoi() {
+            let a = document.getElementById("sotien").value;
+            let b = document.getElementById("option1").value;
+            let c = document.getElementById("option2").value;
+            let Ketqua;
+
+            if (b == "USD" && c == "VND") {
+                Ketqua = "Ketqua: " + (a * 23000) + " Đ";
+            } else if (b == "VND" && c == "USD") {
+                Ketqua = "Ketqua: " + (a / 23000) + " $";
+            } else if (b == "VND") {
+                Ketqua = "Ketqua: " + a + " Đ";
+            } else {
+                Ketqua = "Ketqua: " + a + " $";
+            }
+            alert(Ketqua)
+        }
+
+    </script>
+</table>
+
+</body>
+</html>

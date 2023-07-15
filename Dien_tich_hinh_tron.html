@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="bankinh" placeholder="Nhập bán kính hình tròn">
+<button onclick="Dientich()">Tính diện tích hình tròn</button>
+<script>
+  function Dientich () {
+    let r = document.getElementById("bankinh").value;
+    const PI = 3.14;
+    let S = r * r * PI;
+    alert(S)
+  }
+</script>
+
+</body>
+</html>
